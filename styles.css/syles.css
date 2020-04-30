@@ -4,7 +4,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: aqua;
+    background-color: whitesmoke;
 }
 
 .container{
@@ -23,7 +23,12 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: gray;
+    background-color: black;
+    height:30px;
+    padding: 20px;
+    width: 150px;
+    color: white;
+    
 
 }
 
@@ -44,7 +49,7 @@ body{
     border-radius: 30px;
     margin-top: 30px;
     width: 100%;
-    background-color: rgba(158, 19, 19);
+    background-color:black;
     display: flex;
     justify-content: space-between;
     
@@ -59,7 +64,7 @@ body{
   
 }
 .main-footer li{
-    background-color: rgba(158, 19, 19);
+    background-color: black;
     border-color: white;
     margin-bottom: 0px;
    
@@ -72,10 +77,64 @@ body{
     margin: auto;
     font-size: smaller;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgba(158,19,19,);
+    background-color: black;
     padding-bottom: 0px;
     border-right: 1px solid white;
+    justify-content: center;            
+    display: block;
+    color: white;  
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+.logo{
+    border-radius: 150px;
+    width: 180px;
+}
+
+.deezer{
+    width: 100px;
+    
+}
+
+.buscador{
+    width: 90%;
+    border-radius: 50%;
+    height: 3vh;
+}
+
+.cajas ul li a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    height:250px;
+    padding: 20px;
+    width: 250px;
+    color: white;
+    border-radius: 50%;
+    
     
 
 }
+
+.cajas ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    align-items: center;
+    width: 1180px;
+    font-size: medium;
+    padding-right: 0px;
+    padding-left: 0px;
+    gap: 20px;
+  
+}
+
+
 
