@@ -4,7 +4,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: whitesmoke;
+    background-color: whitesmoke
 }
 
 .container{
@@ -111,13 +111,11 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: transparent;
+    background-color: black;
     height:250px;
     padding: 20px;
     width: 250px;
-    color: black;
-    font-family: Arial, Helvetica, sans-serif ;
-
+    color: white;
     border-radius: 50%;
     
     
@@ -138,25 +136,7 @@ body{
   
 }
 
-.noticias{
-
-    background-image: url(https://i.pinimg.com/236x/5e/78/71/5e787116b027a1d660714d601b6dba13.jpg);
-    position: relative;   
-    z-index: 10;
-    border-radius: 50%;
-    
-}
-
-.tendencias{
-    background-image: url(https://pbs.twimg.com/profile_images/1236788909268439041/FSdqhxVq_400x400.jpg);
-    position: relative;   
-    z-index: 10;
-    border-radius: 50%;
-}
-
-.conciertos{
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTz50Y87ubgNyIJegTtcndL68I11pbHd8rHIFNfx4YPnyDv2Fo_&usqp=CAU);
-    position: relative;   
-    z-index: 10;
-    border-radius: 50%;
+.spotify{
+    width: 100px;
+    height: 300px;
 }
