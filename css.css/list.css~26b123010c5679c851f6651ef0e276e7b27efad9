@@ -1,0 +1,166 @@
+body{
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: whitesmoke;
+}
+
+.container{
+    width: 1180px;
+}
+
+.main-header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-nav ul li a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    height:30px;
+    padding: 20px;
+    width: 150px;
+    color: white;
+    
+
+}
+
+.main-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    align-items: center;
+    width: 1180px;
+    font-size: medium;
+    padding-right: 0px;
+    padding-left: 0px;
+    gap: 20px;
+  
+}
+.main-footer{
+    border-radius: 30px;
+    margin-top: 30px;
+    width: 100%;
+    background-color:black;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.main-footer ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    list-style: none;
+    width: 100%;
+    
+    
+  
+}
+.main-footer li{
+    background-color: black;
+    border-color: white;
+    margin-bottom: 0px;
+   
+    
+    
+}
+.main-footer li a{
+    color: white;
+    text-decoration: none;
+    margin: auto;
+    font-size: smaller;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    padding-bottom: 0px;
+    border-right: 1px solid white;
+    justify-content: center;            
+    display: block;
+    color: white;  
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+.logo{
+    border-radius: 150px;
+    width: 180px;
+}
+
+.deezer{
+    width: 100px;
+    
+}
+
+.buscador{
+    width: 90%;
+    border-radius: 50%;
+    height: 3vh;
+}
+
+.cajas ul li a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    height:250px;
+    padding: 20px;
+    width: 250px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif ;
+
+    border-radius: 50%;
+    
+    
+
+}
+
+.cajas ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    align-items: center;
+    width: 1180px;
+    font-size: medium;
+    padding-right: 0px;
+    padding-left: 0px;
+    gap: 20px;
+  
+}
+<<<<<<< HEAD:styles.css/syles.css
+
+.noticias{
+
+    background-image: url(https://i.pinimg.com/236x/5e/78/71/5e787116b027a1d660714d601b6dba13.jpg);
+    position: relative;   
+    z-index: 10;
+    border-radius: 50%;
+    
+}
+
+.tendencias{
+    background-image: url(https://pbs.twimg.com/profile_images/1236788909268439041/FSdqhxVq_400x400.jpg);
+    position: relative;   
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.conciertos{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTz50Y87ubgNyIJegTtcndL68I11pbHd8rHIFNfx4YPnyDv2Fo_&usqp=CAU);
+    position: relative;   
+    z-index: 10;
+    border-radius: 50%;
+}
+=======
+>>>>>>> 26b123010c5679c851f6651ef0e276e7b27efad9:css.css/list.css
