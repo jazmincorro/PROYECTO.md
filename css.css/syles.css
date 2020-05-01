@@ -60,6 +60,7 @@ body{
     justify-content:center;
     list-style: none;
     width: 100%;
+
     
   
 }
@@ -84,14 +85,14 @@ body{
     display: block;
     color: white;  
     text-align: center;
-    padding: 16px;
+    padding: 10px;
     text-decoration: none;
     list-style: none;
 
 }
 
 .logo{
-    border-radius: 150px;
+    border-radius: 150x;
     width: 180px;
 }
 
