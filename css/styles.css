@@ -103,29 +103,6 @@ body{
 
 }
 
-.noticias{
-
-    background-image: url(https://billboard.com.ar/wp-content/uploads/2019/11/PORTADA-RECUERDOS-600x600.jpg);
-    position: relative;   
-    z-index: 10;
-    border-radius: 50%;
-    
-}
-
-.tendencias{
-    background-image: url(https://vivelespatess.github.io/image/top50.jpg);
-    position: relative;   
-    z-index: 10;
-    border-radius: 50%;
-}
-
-.conciertos{
-    background-image: url(https://www.caribbeannewsdigital.com/sites/default/files/2020-04/glastbory.jpg);
-    position: relative;   
-    z-index: 10;
-    border-radius: 50%;
-}
-
 .Tracks{
      background-image: url(https://support.plex.tv/wp-content/uploads/sites/4/2015/04/thewall_disc1_multiselect.png);
      position: relative;
