@@ -78,7 +78,7 @@ body{
     margin: auto;
     font-size: smaller;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb (125, 119, 168);
+    background-color: black;
     padding-bottom: 0px;
     border-right: 1px solid white;
     justify-content: center;            
@@ -98,4 +98,8 @@ body{
 
 .deezer{
     width: 100px;
+}
+.nombres{
+    color: white;
+    margin-right:  15px;
 }

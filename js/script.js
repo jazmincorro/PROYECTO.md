@@ -19,3 +19,23 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/302127')
 
 
 } //no borrar jamas
+
+fetch('https://api.deezer.com/track/3135556')
+.then(function(response) {
+  return response.json()
+})
+.then(function(myJson) {
+  console.log(myJson);
+})
+.catch(function(error) {
+    console.log("Error: " + error);
+  })
+//var listaTracks=resultado.nb_tracks;
+//var listaTracks=document.querySelector('.listaTracks');
+//var listaTracks= nb_tracks;
+
+
+
+
+
+  
