@@ -20,7 +20,7 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/302127')
 
 } //no borrar jamas
 
-fetch('https://api.deezer.com/track/3135556')
+fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/3135556')
 .then(function(response) {
   return response.json()
 })
