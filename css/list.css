@@ -5,6 +5,7 @@ body{
     flex-direction: row;
     justify-content: center;
     background-color: rgb(217, 207, 232);
+    color: black;
 }
 
 .container{
