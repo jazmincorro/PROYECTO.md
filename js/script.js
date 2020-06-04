@@ -19,7 +19,6 @@
 // })
 
 //} //no borrar jamas
-//no borrar
 
 window.onload=function(){
 fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/3135556')
@@ -38,6 +37,7 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/3135556'
  foto.innerHTML+='<img src="images/photo.jpg"> '+picture+' <alt="">'
 
 
+ 
  })
  .catch(function(error) {
     console.log("Error: " + error);
