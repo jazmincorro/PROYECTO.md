@@ -1,13 +1,30 @@
  
-
+window.onload=function(){
 fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart")
 .then(function (response) {
   return response.json();
 })
 .then(function (resultado) {
   console.log(resultado);
-  var listaCanciones = document.querySelector("#listaCanciones");
-  var contenidoCanciones = "";
+})
+var listaCanciones = document.querySelector("#tracks");
+var contenidoCanciones = "";
+for (let i = 0; i < resultado.tracks.data.length; i++) {
+  var canciones1 = resultado.tracks.data[i];
+  contenidoCanciones += '<div class="cajas" id="tracks"> ' + ' <ul>';
+  contenidoCanciones += ' <li class="Tracks"><a href="albums.html">Tracks</a></li>' + '</ul>';
+} }
+
+listaCanciones.innerHTML= contenidoCanciones
+Console.log(listaCanciones);
+})
+
+
+  //<div class="cajas" id="tracks"> 
+        
+  //      <ul>
+  //           <li class="Tracks"><a href="albums.html">Tracks</a></li>
+  //      </ul>
   
   
   
@@ -52,7 +69,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart")
 //  var Artista="";
 //  for (let i = 0; i <myJson.artists.data.length; i++) {
 //    const element = myJson.artists.data[i];
-//    Artista =+ "<li>" +'<div class="uk-card uk-card-default">'+'<div class="uk-card-media-top">';
+//   <div class="uk-card-media-top">';
 //    Artista=+'<img src="' + element.picture_big+'" alt="">' +'</div>'
 //    Artista+= '<div class="uk-card-body"' + '<h3 class="uk-card-title">'+ element.name+'</h3>'
 //    Artista += '<p>'+element.followers+'</p>'+'</div>'+'</div>' +'</li>'
