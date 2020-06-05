@@ -22,20 +22,35 @@ window.onload=function(){
 
 
     //albums
-    // var listaAlbums = document.querySelector("#albums");
-    // var contenidoAlbums = "";
-    // for (let i = 0; i < resultado.albums.data.length; i++) {
-    //   var album1 = resultado.albums.data[i];
-    //   contenidoAlbums += '<button type="button" class="list-group-item list-group-item-action text-black">'  + '<a href="albums.html">'  + album1.title+ '</a>' + '</button>'
-    // } 
-    // document.querySelector("#imagen").innerHTML='<img src="'+ resultado.album.data[1].album.cover+'" class="rounded img-fluid "alt="...">'
+     var listaAlbums = document.querySelector("#Album");
+     var contenidoAlbums = "";
+     for (let i = 0; i < resultado.albums.data.length; i++) {
+       var album1 = resultado.albums.data[i];
+       contenidoAlbums += '<button type="button" class="list-group-item list-group-item-action text-black">' + '<a href="albums.html">' + album1.title + '</a>'+'</button>'
+     } 
+     document.querySelector("#imagenAlbums").innerHTML='<img src="'+ resultado.albums.data[1].cover+'"  class="rounded img-fluid "alt="...">'
 
-    // listaAlbums.innerHTML= contenidoAlbums
-    // Console.log(ListaAlbums);
+     listaAlbums.innerHTML= contenidoAlbums
+     console.log(listaAlbums);
+
+
+     //artistas
+     var listaArtistas= document.querySelector("#Artist");
+     var contenidoArtistas = "";
+     for (let i = 0; i < resultado.artists.data.length; i++) {
+       var Artist1 = resultado.artists.data[i];
+       contenidoArtistas += '<button type="button" class="list-group-item list-group-item-action text-black">' + '<a href="artistas.html">' + Artist1.name + '</a>'+'</button>'
+     } 
+     document.querySelector("#imagenArtista").innerHTML='<img src="'+ resultado.artists.data[1].cover+'"  class="rounded img-fluid "alt="...">'
+
+     listaArtistas.innerHTML= contenidoArtistas
+     console.log(listaArtistas);
+
 
 
   });
 };
+
 
 
 
