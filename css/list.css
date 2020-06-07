@@ -1,8 +1,6 @@
 body{
-    width: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
+   
+   
     justify-content: center;
     background-color: rgb(217, 207, 232);
     color: blanchedalmond;
@@ -48,77 +46,15 @@ body{
   
 }
 
-.buscador input{
-    margin-top:30px;
-    margin-left: 10px;
-    width: 96%;
-    height: 4vh;
-}
-
-.GENEROS ul li a{
+.GENEROS {
     text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height:250px;
-    padding: 20px;
-    width: 250px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+ grid-template-rows: 1fr 1fr 1fr;
+   
     color: black;
     font-weight: bold;
     
-}
-
-.GENEROS ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 50% 50%;
-    justify-content: space-between;
-    list-style: none;
-    align-items: center;
-    width: 1180px;
-    font-size: medium;
-    padding-right: 0px;
-    padding-left: 0px;
-    gap: 20px;
-    margin-left: 105px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    
-
-}
-
-.Rock {
-    background-color: rgb(209, 189, 222);
-    
-
-}
-
-.Metal{
-    background-color:rgb(209, 186, 208);
-}
-
-.Musicalatina{
-    background-color: rgb(148, 117, 140);
-}
-
-.Pop{
-    background-color: rgb(168, 155, 157);
-}
-
-.Indie{
-    background-color: rgb(173, 168, 169);
-}
-
-.Reggaeton{
-    background-color: rgb(120, 77, 85);
-}
-
-.Rap{
-    background-color: rgb(186, 157, 130) ;
-}
-
-.Blues{
-    background-color: rgb(184, 146, 110);
 }
 
 
