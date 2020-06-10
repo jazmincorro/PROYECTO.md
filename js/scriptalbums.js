@@ -8,14 +8,20 @@ window.onload=function(){
 
         var listaDetalles= document.querySelector ('#albums.dt');
         var contenidoAldetalles= "";
-        for (let i = 0; i < resultado.artist; i++) {
-            var detallesAlbum= resultado.artist.data [i];
-            contenidoAldetalles += '<button type="button" class="list-group-item list-group-item-action text-black">' + '<a href="albums.html">' + detallesAlbum.title+ '</a>'+'</button>'
+        for (let i = 0; i < resultado.data.lenght; i++) {
+            contenidoAldetalles+=resultado.data[i].fans;
+            // contenidoAldetalles += //'<button type="button" class="list-group-item list-group-item-action text-black">' + '<a href="albums.html">' + detallesAlbum.title+ '</a>'+'</button>'
+            contenidoAldetalles+='<img src='+ resultado.data[i].title +'"  class="rounded img-fluid "alt="...">';
          }
-         document.querySelector ("#img.albums"). innerHTML= '<img src='+ resultado.artist.data[1].cover +'"  class="rounded img-fluid "alt="...">'
+
+         //document.querySelector ("#img.albums"). innerHTML= '<img src='+ resultado.data[i].title +'"  class="rounded img-fluid "alt="...">'
 
          listaDetalles.innerHTML=contenidoAldetalles
          console.log (listaDetalles);
+        })
+        .catch(function(error){
+            console.log("Error:"+ error);
+
     });
 };
 

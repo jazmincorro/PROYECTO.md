@@ -11,9 +11,9 @@ window.onload=function(){
         console.log(resultado);
      var contenido ='';
         for (let i = 0; i < resultado.object; i++) {
-contenido+= '<div class="genero">'+ resultado.data.name; //chequear si va con el i
-contenido+=  '<img alt="" src="'+ resultado.data.picture_medium +'">';
-contenido+= '<div class="nombregenero">'+resultado.data.type;
+       contenido+= '<div class="genero">'+ resultado.data.name; //chequear si va con el i
+       contenido+=  '<img alt="" src="'+ resultado.data.picture_medium +'">';
+       contenido+= '<div class="nombregenero">'+resultado.data.type;
        
         }
         var contenedor = document.querySelector( '.resultados')

@@ -12,7 +12,7 @@ window.onload=function(){
 
             ContenidoDegeneros+= '<div class="card-body">'+  '<a href="index.html" class="btn btn-warning col 12">'+  resultado.data[i].name+ "</a>";
 
-     ContenidoDegeneros+=    '<img alt="" src="'+ resultado.data[i].picture +'">';
+           ContenidoDegeneros+=    '<img alt="" src="'+ resultado.data[i].picture +'">';
 
      
      
