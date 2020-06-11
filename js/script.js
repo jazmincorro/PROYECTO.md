@@ -26,11 +26,16 @@ window.onload=function(){
      var contenidoAlbums = "";
      for (let i = 0; i < resultado.albums.data.length; i++) {
        var album1 = resultado.albums.data[i];
-       contenidoAlbums += '<button type="button" class="list-group-item list-group-item-action text-black">' + '<a href="albums.html">' + album1.title + '</a>'+'</button>'
+       contenidoAlbums += '<button type="button" class="list-group-item list-group-item-action">'
+       contenidoAlbums +='<a href="albums.html?id=' + 
+       album1.id+ '"class=text-light">' + 
+       album1.title + '</a>'+'</button>';
+       
      } 
      document.querySelector("#imagenAlbums").innerHTML='<img src="'+ resultado.albums.data[1].cover_xl+'"  class="rounded img-fluid "alt="...">'
 
-     listaAlbums.innerHTML= contenidoAlbums
+
+     listaAlbums.innerHTML= contenidoAlbums;
      console.log(listaAlbums);
 
 
