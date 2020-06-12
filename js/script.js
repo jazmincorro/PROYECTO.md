@@ -7,18 +7,18 @@ window.onload=function(){
   .then(function (resultado) {
       console.log(resultado);
     //canciones
-    var listaCanciones = document.querySelector("#tracks");
+     var listaCanciones = document.querySelector("#Tracks");
     var contenidoCanciones = "";
     for (let i = 0; i < resultado.tracks.data.length; i++) {
       var canciones1 = resultado.tracks.data[i];
       contenidoCanciones += '<button type="button" class="list-group-item list-group-item-action">' 
-      contenidoCanciones += '<a href="tracks.html?id=">' +
-      canciones1.id+ '"class=text-black">'+
+      contenidoCanciones += '<a href=tracks.html?id=' +
+      canciones1.id + ' "class="text-light">' + 
       canciones1.title + '</a>' + '</button>'
     
     }
 
-      document.querySelector("#imagen").innerHTML='<img src="'+ resultado.tracks.data[1].album.cover_xl+'" class="rounded img-fluid "alt="...">'
+      document.querySelector("#imagen").innerHTML='<img src="'+ resultado.tracks.data[1].album.cover_xl+'" class="rounded img-fluid"alt="...">'
 
     listaCanciones.innerHTML= contenidoCanciones
     console.log(listaCanciones);
@@ -31,7 +31,7 @@ window.onload=function(){
        var album1 = resultado.albums.data[i];
        contenidoAlbums += '<button type="button" class="list-group-item list-group-item-action">'
        contenidoAlbums +='<a href="albums.html?id=' + 
-       album1.id+ '"class=text-light">' + 
+       album1.id+ ' "class="text-light">' + 
        album1.title + '</a>'+'</button>';
        
      } 

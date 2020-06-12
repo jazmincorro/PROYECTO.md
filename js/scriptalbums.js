@@ -41,13 +41,6 @@ window.onload=function(){
     });
 };
 
-{/* <h1>Albums</h1>
-   <div class="cajas d-flex" id="Albums-nousar"> 
-    <div class="col-4"id="imagenAlbums"></div>
-   <div class="list-group col-7" id="Album">
-    </div>       
-    </div> */}
-
    
     
     
