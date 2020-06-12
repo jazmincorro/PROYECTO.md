@@ -15,30 +15,34 @@ window.onload=function(){
        var listaDetalles= document.querySelector ('.mb-3');
        var contenidoArdetalles= "";
       
-        contenidoArdetalles+= `<img src="${resultado.cover_xl}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">${resultado.title}</h5>
-          <p class="card-text">${resultado.release_date}</p>
-          <p class="card-text"> Duration: ${resultado.duration}</p>
-          <p class="card-text"><small class="text-muted"></small></p>
+        contenidoArdetalles+= `<img src="${resultado.picture_xl}" class="card-img-top" alt="...">
+        
+          <div class="card-body">
+          <p class="card-text">${resultado.name}</p>
+          <p class="card-text"> Fans: ${resultado.nb_fan}</p>
+         <p class="card-text"><small class="text-muted"></small></p>
         </div>
-        <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example"></div> 
+        <div id="list-example" class="${resultado.tracklist}>
+          <a class="list-group-item list-group-item-action" href="">Item 1</a>
+          <a class="list-group-item list-group-item-action" href="">Item 2</a>
+          <a class="list-group-item list-group-item-action" href="">Item 3</a>
+          <a class="list-group-item list-group-item-action" href="">Item 4</a>
+          <a class="list-group-item list-group-item-action" href="">Item 5</a>
+        </div>
+        <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
+        </div>
+        <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example"></div>`
 
-       <a href="artistas.html?id=${resultado.artist.id}"><h1>Artist: ${resultado.artist.name} </h1> </a>
-           <div class="cajas d-flex" id="Artistas-nousar"> 
-            <div class="col-4"id="imagenArtistas">
-            <img src="${resultado.album.cover_big}"></div>
-           <div class="list-group col-7" id="Artistas">
-            </div>       
-           </div>`
 
+       fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/" + idDeLaCAncion +"/top" ) 
          
          
            listaDetalles.innerHTML=contenidoArdetalles
            console.log (listaDetalles);
-          })
-          .catch(function(error){
-              console.log("Error:"+ error);
+          });
+         // .catch(function(error){
+  //  console.log("Error:"+ error);
   
-      });
+      // });
   };
+

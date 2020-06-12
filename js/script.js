@@ -12,8 +12,8 @@ window.onload=function(){
     for (let i = 0; i < resultado.tracks.data.length; i++) {
       var canciones1 = resultado.tracks.data[i];
       contenidoCanciones += '<button type="button" class="list-group-item list-group-item-action">' 
-      contenidoCanciones += '<a href=tracks.html?id=' +
-      canciones1.id + ' "class="text-light">' + 
+      contenidoCanciones += '<a href="tracks.html?id=' +
+      canciones1.id + '" class="text-light">' + 
       canciones1.title + '</a>' + '</button>'
     
     }
@@ -31,7 +31,7 @@ window.onload=function(){
        var album1 = resultado.albums.data[i];
        contenidoAlbums += '<button type="button" class="list-group-item list-group-item-action">'
        contenidoAlbums +='<a href="albums.html?id=' + 
-       album1.id+ ' "class="text-light">' + 
+       album1.id+ '" class="text-black">' + 
        album1.title + '</a>'+'</button>';
        
      } 
@@ -48,8 +48,8 @@ window.onload=function(){
      for (let i = 0; i < resultado.artists.data.length; i++) {
        var Artist1 = resultado.artists.data[i];
        contenidoArtistas += '<button type="button" class="list-group-item list-group-item-action">'
-       contenidoArtistas += '<a href="artistas.html?id=">' + 
-       Artist1.id+ 'class= text-black">' +
+       contenidoArtistas += '<a href="artistas.html?id=' + 
+       Artist1.id+ '" class= text-black">' +
        Artist1.name + '</a>'+'</button>';
      } 
      document.querySelector("#imagenArtista").innerHTML='<img src="'+ resultado.artists.data[1].picture_xl+'"  class="rounded img-fluid "alt="...">'
