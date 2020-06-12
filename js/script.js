@@ -47,11 +47,14 @@ window.onload=function(){
      var contenidoArtistas = "";
      for (let i = 0; i < resultado.artists.data.length; i++) {
        var Artist1 = resultado.artists.data[i];
-       contenidoArtistas += '<button type="button" class="list-group-item list-group-item-action text-black">' + '<a href="artistas.html">' + Artist1.name + '</a>'+'</button>'
+       contenidoArtistas += '<button type="button" class="list-group-item list-group-item-action">'
+       contenidoArtistas += '<a href="artistas.html?id=">' + 
+       Artist1.id+ 'class= text-black">' +
+       Artist1.name + '</a>'+'</button>';
      } 
      document.querySelector("#imagenArtista").innerHTML='<img src="'+ resultado.artists.data[1].picture_xl+'"  class="rounded img-fluid "alt="...">'
 
-     listaArtistas.innerHTML= contenidoArtistas
+     listaArtistas.innerHTML= contenidoArtistas;
      console.log(listaArtistas);
 
 
