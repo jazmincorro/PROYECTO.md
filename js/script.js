@@ -11,7 +11,10 @@ window.onload=function(){
     var contenidoCanciones = "";
     for (let i = 0; i < resultado.tracks.data.length; i++) {
       var canciones1 = resultado.tracks.data[i];
-      contenidoCanciones += '<button type="button" class="list-group-item list-group-item-action text-black">'  + '<a href="tracks.html">' + canciones1.title + '</a>' + '</button>'
+      contenidoCanciones += '<button type="button" class="list-group-item list-group-item-action">' 
+      contenidoCanciones += '<a href="tracks.html?id=">' +
+      canciones1.id+ '"class=text-black">'+
+      canciones1.title + '</a>' + '</button>'
     
     }
 
