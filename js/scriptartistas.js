@@ -32,17 +32,23 @@ window.onload=function(){
         <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
         </div>
         <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example"></div>`
+       
+        listaDetalles.innerHTML=contenidoArdetalles
+        console.log (listaDetalles);
+       });
+
+      
+
+      var idArtistas= queryStringObj.get("id");
+      console.log(idArtistas);
+
+       fetch("https://cors-anywhere.herokuapp.com/https:/https://api.deezer.com/artist/"+idArtistas+"/top") 
+
+       .then(function (response) {
+        return response.json();
+      })
 
 
-       fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/" + idDeLaCAncion +"/top" ) 
-         
-         
-           listaDetalles.innerHTML=contenidoArdetalles
-           console.log (listaDetalles);
-          });
-         // .catch(function(error){
-  //  console.log("Error:"+ error);
-  
-      // });
-  };
 
+    
+    }

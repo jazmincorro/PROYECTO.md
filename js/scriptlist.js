@@ -8,7 +8,7 @@ window.onload=function(){
      //quiero mostrar un listado  de li que tenga el nombre del genero y la imagen de cada uno
         var listadoDegeneros = document.querySelector('.GENEROS');
         var ContenidoDegeneros = '';// texto
-        for (let i = 0; i < resultado.data.length; i++) {
+        for (let i = 1; i < resultado.data.length; i++) {
 
             ContenidoDegeneros+= '<div class="card-body">'+  '<a href="resultadobusquedageneros.html" class="btn btn-warning col 12">'+  resultado.data[i].name+ "</a>";
 

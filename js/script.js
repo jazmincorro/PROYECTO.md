@@ -13,7 +13,7 @@ window.onload=function(){
       var canciones1 = resultado.tracks.data[i];
       contenidoCanciones += '<button type="button" class="list-group-item list-group-item-action">' 
       contenidoCanciones += '<a href="tracks.html?id=' +
-      canciones1.id + '" class="text-light">' + 
+      canciones1.id + '" class="text-blackt">' + 
       canciones1.title + '</a>' + '</button>'
     
     }
