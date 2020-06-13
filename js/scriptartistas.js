@@ -1,5 +1,5 @@
-window.onload=function(){
-  var queryString =document.location.search.substring (0);
+ window.onload=function(){
+  var queryString =document.location.search;
   var queryStringObj = new URLSearchParams (queryString);
 
   var idArtistas= queryStringObj.get("id");
@@ -9,7 +9,7 @@ window.onload=function(){
       return response.json();
   })
   .then(function (resultado) {
-      console.log(resultado);
+    console.log(resultado);
 
 
        var listaDetalles= document.querySelector ('.mb-3');
@@ -39,16 +39,25 @@ window.onload=function(){
 
       
 
-      var idArtistas= queryStringObj.get("id");
-      console.log(idArtistas);
+      //var idArtistas= queryStringObj.get("id");
+      //console.log(idArtistas);
+      window.onload=function(){
 
-       fetch("https://cors-anywhere.herokuapp.com/https:/https://api.deezer.com/artist/"+idArtistas+"/top") 
+       fetch("https://cors-anywhere.herokuapp.com/https:/https://api.deezer.com/artist/" + idArtistas + "/top") 
 
        .then(function (response) {
         return response.json();
       })
+    
+      .then(function (resultado){
+        console.log(resultado);
+
+      });
+    }}
+
+       
 
 
 
     
-    }
+    
