@@ -10,13 +10,10 @@ window.onload=function(){
         var ContenidoDegeneros = '';// texto
         for (let i = 1; i < resultado.data.length; i++) {
 
-            ContenidoDegeneros+= '<div class="card-body">'+  '<a href="resultadobusquedageneros.html" class="btn btn-warning col 12">'+  resultado.data[i].name+ "</a>";
+         ContenidoDegeneros+='<div class="card-body">'+'<a href="resultadobusquedageneros.html?idGenero=" class="btn btn-warning col 12">'+  resultado.data[i].name+ "</a>";
 
-           ContenidoDegeneros+=    '<img alt="" src="'+ resultado.data[i].picture +'">';
-
-     
-     
-     ContenidoDegeneros+="</div> </div>";
+         ContenidoDegeneros+='<img alt="" src="'+ resultado.data[i].picture +'">';
+         ContenidoDegeneros+="</div> </div>";
         }
         listadoDegeneros.innerHTML=ContenidoDegeneros;
       })
