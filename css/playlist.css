@@ -116,7 +116,7 @@ body{
   
 }
 .main-footer li{
-    background-color: blac;
+    background-color: black;
     border-color: white;
     margin-bottom: 0px;
    
@@ -140,11 +140,6 @@ body{
     text-decoration: none;
     list-style: none;
 
-}
-
-.logo{
-    width: 180px;
-    padding-top: 15px;
 }
 
 .deezer{

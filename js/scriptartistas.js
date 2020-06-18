@@ -40,8 +40,8 @@ window.onload = function () {
       for (let i = 0; i < resultado.data.length; i++) {
         const element = resultado.data[i];
         contenidoTop +=
-          ' <a class="list-group-item list-group-item-action" href="tracks.html?id=' +
-          idArtistas +
+          ' <a class="list-group-item list-group-item-action" href="tracks.html?id=' + 
+         
           '">' +
           element.title +
           "</a>";

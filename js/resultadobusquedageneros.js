@@ -1,5 +1,5 @@
 window.onload=function(){
-    var queryStringG =document.location.search.substring (0);
+    var queryStringG =document.location.search;
     var queryStringObj = new URLSearchParams (queryStringG);
 
     var idGenero= queryStringObj.get("id");
@@ -14,11 +14,11 @@ window.onload=function(){
         var listaDetallesGenero= document.querySelector ('#detalleGenero');
         var contenidoGdetalles= "";
         
-          contenidoGdetalles+= `<h5 class="card-title">${resultado.title}</h5>
+          contenidoGdetalles+= `<h5 class="card-title">${resultado.name}</h5>
             <p class="card-text"><small class="text-muted"></small></p>
             </div>
             <a href="artistas.html?idGenero=${genero.id}">
-            <h1>Artist: ${resultado.artist.name} </h1> </a>
+            <h1>Artist: ${resultado.name} </h1> </a>
              <div class="cajas d-flex" id="Albums-nousar"> 
               <div class="col-4"id="imagenAlbums">
               <img src="${resultado.artist.picture_big}"></div>
@@ -36,7 +36,48 @@ window.onload=function(){
 
     });
 
-}
+
+    var idGenero= queryStringObj.get("id");
+    this.console.log(idGenero);
+fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/" + idGenero + "/artist")
+
+.then(function (response) {
+    return response.json();
+  })
+  .then(function (resultado) {
+    console.log(resultado);
+    var contenedorArtistaB = document.querySelector("#detalleGenero");
+    var contenidoArtistaG= "";
+    for (let i = 0; i < resultado.data; i++) {
+      const element = resultado.data[i];
+      contenidoArtistaG +=
+        ' <a class="list-group-item list-group-item-action" href="tracks.html?id=' +
+        idArtistas +
+        '">' +
+        element.title +
+        "</a>";
+    }
+
+    
+    
+    contenedorArtistaB.innerHTML= contenidoArtistaG;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //     var querystring= document.location.search;
@@ -65,8 +106,8 @@ window.onload=function(){
 //       })
 //       .catch(function(error){
 //           console.log("Error:"+ error);
-//       });
+     });
      
      
    
- 
+    }

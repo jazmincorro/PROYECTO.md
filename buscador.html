@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/buscador.css">
+    <link rel="stylesheet" href="">
+    <script src="js/buscador.js"></script>
+    <title>Search</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-black">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="list.html"> Listado de Géneros <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="playlist.html"> Playlist </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="about.html" tabindex="-1" aria-disabled="true">About us</a>
+            </li>
+          </ul>
+          <img src="images/mslogo.png" width="60" height="50" alt="" loading="lazy">
+          <form class="form-inline my-2 my-lg-0" action="buscador.html" method="GET">
+             <input class="form-control mr-sm-2" type="search" name="q" placeholder="SEARCH">
+               <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                   </form> 
+        </div>
+        
+      </nav>
+</body>
+</html>

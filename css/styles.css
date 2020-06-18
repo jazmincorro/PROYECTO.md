@@ -82,12 +82,9 @@ body{
   
 }
 .main-footer li{
-    display: flex;
-    flex-direction: column;
     background-color: black;
     border-color: white;
     margin-bottom: 0px;
-
    
     
     
@@ -100,6 +97,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: black;
     padding-bottom: 0px;
+    border-right: 1px solid white;
     justify-content: center;            
     display: block;
     color: white;  
@@ -110,10 +108,6 @@ body{
 
 }
 
-.logo{
-    width: 180px;
-    padding-top: 15px;
-}
 
 .deezer{
     width: 100px;
