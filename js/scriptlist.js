@@ -5,12 +5,12 @@ window.onload=function(){
     })
     .then(function (resultado) {
         console.log(resultado);
-     //quiero mostrar un listado  de li que tenga el nombre del genero y la imagen de cada uno
+    
         var listadoDegeneros = document.querySelector('.GENEROS');
-        var ContenidoDegeneros = '';// texto
+        var ContenidoDegeneros = '';
         for (let i = 1; i < resultado.data.length; i++) {
 
-         ContenidoDegeneros+='<div class="card-body">'+'<a href="resultadobusquedageneros.html?idGenero=" class="btn btn-warning col 12">'+  resultado.data[i].name+ "</a>";
+         ContenidoDegeneros+='<div class="card-body">'+'<a href="resultadobusquedageneros.html?idGenero="class="btn btn-warning col 12">'+  resultado.data[i].name+ "</a>";
 
          ContenidoDegeneros+='<img alt="" src="'+ resultado.data[i].picture +'">';
          ContenidoDegeneros+="</div> </div>";
