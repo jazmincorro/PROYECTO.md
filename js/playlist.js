@@ -1,73 +1,54 @@
 
-window.onload=function(){
-    // Playlist
-
-var recuperoStorage = localStorage.getItem('playlist');
-var  playlist = JSON.parse(recuperoStorage);
-
-var ContenedorPlaylist = document.querySelector('#RepPlaylist');
-console.log(recuperoStorage);
-if(recuperoStorage == null || recuperoStorage == "[]"){
-    playlist = [];
-    ContenedorPlaylist.innerHTML += '<li>  </li>'
-    console.log(ContenedorPlaylist);
+// Playlist
+window.onload = function () {
+    //Recupero el repositorio local
+   
+    let recuperoStorage = localStorage.getItem("playlist");
     
-} else {
-// va a mostrar cada elemento del array
-    playlist.forEach(function(idTracks){
-       VerTrack(idTracks);
-    });
-}
-var ContenidoPlaylist='';
-function VerTrack (idTracks){
-     fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/'+ idTracks) 
-
+    //Lo convierto en JSON
+    
+    let playlist = JSON.parse(recuperoStorage);
+    
+    //Selcciono la playlist en el HTML
+  
+    let miPlaylist = document.querySelector("#MiPlaylist");
+    console.log(recuperoStorage);
+    //Si la playlist no tiene canciones, te da un mensaje
+    if (recuperoStorage == null || recuperoStorage == "[]") {
+      playlist = [];
+      miPlaylist.innerHTML +=
+        "<tr><td> No hay canciones en tu playlist </td></tr>";
+      console.log(miPlaylist);
+      //Si lo tiene, te muestra todos los tracks 
+    } else {
+      playlist.forEach(function (idTrack) {
+        mostrarTrack(idTrack);
+      });
+    }
+    //Traigo todas las canciones de la API con un fetch 
+    function mostrarTrack(idTrack) {
+      fetch(
+        "https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/" +
+          idTrack
+      )
         .then(function (response) {
-            return response.json();
+          return response.json();
         })
-        .then(function (track) {
-            ContenedorPlaylist.innerHTML += '<li>' + '<a href="track.html?id=' + track.id + '">' + track.title + '</a></li>' 
+        .then(function (respuesta) {
+          //le agrego el HTMl a la playlist
+          miPlaylist.innerHTML +=
+            "<tr>" +
+            '<td class="d-flex justify-content-between align-items-center">' +
+            '<a href="Cancion.html?id=' +
+            respuesta.id +
+            '" class="text-light">' +
+            respuesta.title +
+            "</a></td>" +
+            "</tr>";
         })
-        console.log (track)
-
-        ContenidoPlaylist += '<li>' + '<a href= "detalle.html?idTracks=' + track.idTracks + '"&tipo=track" class="canciones">'; 
-        ContenidoPlaylist += '<a href="detalle.html?idTracks=' + track.artist.idTracks + '&tipo=artist" class="NombreDelaPlayist">';
-        
-
-       
-
-
-// no borrar 
-
-// var recuperoStorage = localStorage.getItem('playlist');
-// var playlist = JSON.parse(recuperoStorage);
-
-// var playlistWrapper = document.querySelector('.playlistWrapper');
-// console.log(recuperoStorage);
-// if(recuperoStorage == null || recuperoStorage == "[]"){
-//     playlist = [];
-//     playlistWrapper.innerHTML += '<li> No hay canciones en tu playlist </li>'
-//     console.log(playlistWrapper);
-    
-// } else {
-
-//     playlist.for(function(idTrack){
-//         contenidoTrack(idTrack);
-//     });
-// }
-
-// function contenidoTrack(idTrack){
-//     fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/playlist/908622995")
-
-//         .then(function (response) {
-//             return response.json();
-//         })
-//         .then(function (track) {
-//             playlistWrapper.innerHTML += '<li>' + '<a href="track.html?id=' + track.id + '">' + track.title + '</a></li>' 
-//         })
-//         .catch(function(error){
-//             console.log(error);
-            
-//         })
-// };
-// }
+        //Si hay un error lo muestro en la consola
+        .catch(function (errors) {
+          console.log(errors);
+        });
+    }
+  };

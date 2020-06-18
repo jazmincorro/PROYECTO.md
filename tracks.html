@@ -8,7 +8,6 @@
     <script src="https://kit.fontawesome.com/acbb8010fa.js"
     crossorigin="anonymous">
     </script>
-    <script src="js/scriptalbums.js"></script>
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -49,40 +48,49 @@
           </form>
         </div>
       </nav>
+      <!-- Canción -->
+    <div class="d-flex justify-content-center">
+      <div class="text-center col-lg-6 col-12 col-md-8" id="Canciones"></div>
+    </div>
      <!--lista tracks-->
-     <div class="card mb-3">
-      <img src="" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Detalles</h5>
-          <p class="card-text"></p>
-          <p class="card-text"><small class="text-muted"></small></p>
-        </div>
-
-         <div id="list-example" class="list-group">
-          <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
-          <a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
-          <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
-          <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
-          <a class="list-group-item list-group-item-action" href="#list-item-2">Item 5</a>
-          <a class="list-group-item list-group-item-action" href="#list-item-3">Item 6</a>
-          <a class="list-group-item list-group-item-action" href="#list-item-4">Item 7</a>
-        </div>
-        <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
-        </div>
-
+     
   
       <!-- tracks detalles -->
-      <h1 >Tracks</h1>
+     
    <div class="cajas d-flex" id="Canciones"> 
     <div class="col-4"id="imagen"></div>
    <div class="list-group col-7" id="Tracks">
+    
     </div>     
     </div> 
         
 
       </div>
-
-
+      <div
+      class="col-12 font-weight-bolder d-flex justify-content-center"
+      id="BotonAgregar"
+    >
+      <button
+        type="button"
+        class="btn btn-secondary"
+        data-container="body"
+       
+       
+       
+      >
+      <svg class="bi bi-arrow-down-circle" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+        <path fill-rule="evenodd" d="M4.646 7.646a.5.5 0 0 1 .708 0L8 10.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z"/>
+        <path fill-rule="evenodd" d="M8 4.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5z"/>
+      </svg>
+        Agregar a playlist
+      </button>
+    </div>
+      <!-- <button type="button" class="btn btn-primary"><button> <svg class="bi bi-arrow-down-circle" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+        <path fill-rule="evenodd" d="M4.646 7.646a.5.5 0 0 1 .708 0L8 10.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z"/>
+        <path fill-rule="evenodd" d="M8 4.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5z"/>
+      </svg></button> -->
       <!-- Footer -->
 
     <footer class="main-footer">
