@@ -1,42 +1,44 @@
 window.onload=function(){
 
-    var idGenero= queryStringObj.get("id");
-    console.log(idGenero);
-    fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/" + idGenero)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (resultado) {
-        console.log(resultado);
+    // var idGeneros= queryStringObj.get("id");
+    // console.log(idGeneros);
+    // fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/" + idGeneros /artist/)
+    // .then(function (response) {
+    //     return response.json();
+    // })
+    // .then(function (resultado) {
+    //     console.log(resultado);
 
-        var listaDetallesGenero= document.querySelector ('#detalleGenero');
-        var contenidoGdetalles= "";
+    //     var listaDetallesGenero= document.querySelector ('#detalleGenero');
+    //     var contenidoGdetalles= "";
         
-          contenidoGdetalles+= `<h5 class="card-title">${resultado.title}</h5>
-            <p class="card-text"><small class="text-muted"></small></p>
-            </div>
-            <a href="artistas.html?idGenero=${genero.id}">
-            <h1>Artist: ${resultado.artist.name} </h1> </a>
-             <div class="cajas d-flex" id="Albums-nousar"> 
-              <div class="col-4"id="imagenAlbums">
-              <img src="${resultado.artist.picture_big}"></div>
-             <div class="list-group col-7" id="Album">
-              </div>       
-             </div>`
+    //       contenidoGdetalles+= `<h5 class="card-title">${resultado.title}</h5>
+    //         <p class="card-text"><small class="text-muted"></small></p>
+    //         </div>
+    //         <a href="artistas.html?idGenero=${genero.id}">
+    //         <h1>Artist: ${resultado.artist.name} </h1> </a>
+    //          <div class="cajas d-flex" id="Albums-nousar"> 
+    //           <div class="col-4"id="imagenAlbums">
+    //           <img src="${resultado.artist.picture_big}"></div>
+    //          <div class="list-group col-7" id="Album">
+    //           </div>       
+    //          </div>`
 
            
            
-         listaDetallesGenero.innerHTML=contenidoGdetalles
-         console.log (listaDetallesGenero);
-        })
-        .catch(function(error){
-            //console.log("Error:"+ error);
+    //      listaDetallesGenero.innerHTML=contenidoGdetalles
+    //      console.log (listaDetallesGenero);
+    //     })
+    //     .catch(function(error){
+    //         //console.log("Error:"+ error);
 
-    });
+    // });
 
     var queryStringG =document.location.search;
     var queryStringObj = new URLSearchParams (queryStringG);
-
+    var idGeneros= queryStringObj.get("id");
+    console.log(idGeneros);
+     fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/" + idGeneros /'artist/')
 
     if (typeQuerySelector=='genero') {
         var Tracks
@@ -48,7 +50,7 @@ window.onload=function(){
 
         imagenGenero.innerHTML+= "<img src= '"+ Imagen+ "'alt= 'genero imagen'>";
         nombreGenero.innerHTML+= Nombre
-        console.log (resultado.data)
+        console.log (resultado.data);
         
         
         fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/" + idGenero + "/artists")
@@ -68,14 +70,14 @@ window.onload=function(){
                 var idAr= resultado.data[i].id;
                 ArNombre.innerHTML+= pictureAr
                 
-            }) 
+            }
 
             console.log("error:" + error);
-        }
-    });
+        });
+    
+
+
 }
-
-
 
     // var querystring= document.location.search;
     // var querystringObj= new URLSearchParams (querystring);
@@ -107,4 +109,4 @@ window.onload=function(){
      
      
    
- 
+}// no borrar
