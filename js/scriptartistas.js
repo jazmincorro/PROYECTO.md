@@ -2,11 +2,11 @@ window.onload = function () {
   var queryString = document.location.search;
   var queryStringObj = new URLSearchParams(queryString);
 
-  var idArtistas = queryStringObj.get("id");
-  console.log(idArtistas);
+  var idArtista = queryStringObj.get("id");
+  console.log(idArtista);
   fetch(
     "https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/" +
-      idArtistas
+      idArtista
   )
     .then(function (response) {
       return response.json();
@@ -29,7 +29,7 @@ window.onload = function () {
       listaDetalles.innerHTML = contenidoArdetalles;
       console.log(listaDetalles);
     });
-  fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/" + idArtistas +"/top")
+  fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/" + idArtista +"/top")
     .then(function (response) {
       return response.json();
     })
@@ -40,16 +40,16 @@ window.onload = function () {
       for (let i = 0; i < resultado.data.length; i++) {
         const element = resultado.data[i];
         contenidoTop +=
-          ' <a class="list-group-item list-group-item-action" href="tracks.html?id=' + 
+          ' <a class="list-group-item list-group-item-action" href="tracks.html?id=' + element.id +
          
           '">' +
           element.title +
           "</a>";
       }
       
-      
-      contenedorTop.innerHTML=contenidoTop;
       console.log(contenedorTop);
+      contenedorTop.innerHTML=contenidoTop;
+      
     });
   }
 
