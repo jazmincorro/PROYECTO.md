@@ -1,6 +1,71 @@
 window.onload=function(){
+    var queryStringD =document.location.search;
+    var queryStringObj = new URLSearchParams (queryStringD);
+    var id= queryStringObj.get("id");
+    fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/" + id)
+    var ImagenGeneroD= resultado.picture;
+    var IdGeneroD= resultado.id;
+    var ImagenGen= documnt.querySelector( '#ImagenGenero')
+    var  Name= document.querySelector('#NombreG')
+    ImagenGen.innerHTML += "<img src= '"+ ImagenGeneroD+"' alt'>";
+   
+   
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (resultado) {
+        console.log(resultado);
+   var queryStringG =document.location.search;
+    var queryStringObj = new URLSearchParams (queryStringG);
+    var idGeneros= queryStringObj.get("id");
+   
+     fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/" + id+ "/artists")
+         
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (resultado) {
+            console.log(resultado);
+            var ContnedorGenerosD=  document.querySelector('#listaArtistas');
 
-    // var idGeneros= queryStringObj.get("id");
+        //     var ContenidoGenerosD='';
+        //   for (let i = 0; i < '10'; i++) {
+        //   const element = resultado.data[i];
+    
+
+        //         ContenidoGenerosD += element.name
+        //         + '<img alt="" src="'+element.picture+'">'+
+        //          ' <a class="list-group-item list-group-item-action" href="tracks.html?id=' + element.id +
+         
+        //        '">';
+
+        //     }
+
+
+        //       ContnedorGenerosD.innerHTML+= ContenidoGenerosD
+    
+                
+        //     })
+           
+        
+    
+
+
+})
+}// no borrar
+
+
+
+
+
+
+
+
+
+
+
+
+ // var idGeneros= queryStringObj.get("id");
     // console.log(idGeneros);
     // fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/" + idGeneros /artist/)
     // .then(function (response) {
@@ -34,50 +99,9 @@ window.onload=function(){
 
     // });
 
-    var queryStringG =document.location.search;
-    var queryStringObj = new URLSearchParams (queryStringG);
-    var idGeneros= queryStringObj.get("id");
-    console.log(idGeneros);
-     fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/" + idGeneros /'artist/')
-
-    if (typeQuerySelector=='genero') {
-        var Tracks
-        var Nombre
-        var Imagen
-        var idGenero= resultado.id
-        var imagenGenero= document.querySelector ("#ImagenGenero")
-        var nombreGenero= document.querySelector ("#NombreG") 
-
-        imagenGenero.innerHTML+= "<img src= '"+ Imagen+ "'alt= 'genero imagen'>";
-        nombreGenero.innerHTML+= Nombre
-        console.log (resultado.data);
-        
-        
-        fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/" + idGenero + "/artists")
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (resultado) {
-            console.log(resultado);
 
 
-            for (let i = 0; i < "10"; i++) {
-                var nameAr=resultado.data [i].name;
-                var pictureAr= resultado.data[i].picture_big;
-                var ArNombre= document.querySelector ("#listaArtistas");
 
-
-                var idAr= resultado.data[i].id;
-                ArNombre.innerHTML+= pictureAr
-                
-            }
-
-            console.log("error:" + error);
-        });
-    
-
-
-}
 
     // var querystring= document.location.search;
     // var querystringObj= new URLSearchParams (querystring);
@@ -109,4 +133,4 @@ window.onload=function(){
      
      
    
-}// no borrar
+// no borrar
