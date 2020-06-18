@@ -22,22 +22,22 @@ var ContenidoPlaylist='';
 function VerTrack (idTracks){
      fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/'+ idTracks) 
 
-    fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/playlist/")
         .then(function (response) {
             return response.json();
         })
         .then(function (track) {
             ContenedorPlaylist.innerHTML += '<li>' + '<a href="track.html?id=' + track.id + '">' + track.title + '</a></li>' 
         })
-        .catch(function(errors){
-            console.log(errors);
-            
-        })
-};
+        console.log (track)
+
+        ContenidoPlaylist += '<li>' + '<a href= "detalle.html?idTracks=' + track.idTracks + '"&tipo=track" class="canciones">'; 
+        ContenidoPlaylist += '<a href="detalle.html?idTracks=' + track.artist.idTracks + '&tipo=artist" class="NombreDelaPlayist">';
+        
+
+       
 
 
-
-}// no borrar 
+// no borrar 
 
 // var recuperoStorage = localStorage.getItem('playlist');
 // var playlist = JSON.parse(recuperoStorage);
