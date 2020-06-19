@@ -24,14 +24,13 @@ window.onload = function () {
         var Artista= element.artist.name
         
 
-        ContenidoTracks+= 
-        ContenidoTracks+= 
-        ContenidoTracks+= ""
+        ContenidoTracks+=  
+        `<form class="form-inline my-2 my-lg-0" action <a href="buscador.html?id=${element.title}" method="GET"></form> 
+        <input class="form-control mr-sm-2" type="search" name="q" placeholder="SEARCH">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form> `
         
-    }
     
 });
-     
-     
-   
+       
 }
