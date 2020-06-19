@@ -21,6 +21,9 @@ window.onload = function () {
        
           canciones1.title + '</a>' + '</button>'
         }
+        document.querySelector("#imagen").innerHTML='<img src="'+ data.data[0].album.cover_xl+'" class="rounded img-fluid"alt="...">'
+
+        listaCanciones.innerHTML= contenidoCanciones
 {/* 
         ContenidoTracks+=  
         `<form class="form-inline my-2 my-lg-0" action <a href="buscador.html?id=${element.title}" method="GET"></form> 
