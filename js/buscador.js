@@ -12,7 +12,7 @@ window.onload = function () {
     .then(function (resultado) {
         console.log(resultado.data);
     
-    var Contenido= ""
+    var ContenidoTracks= ""
     
     for (let i = 0; i < resultado.data.length; i++) {
         const element = resultado.data[i];
@@ -24,6 +24,9 @@ window.onload = function () {
         var Artista= element.artist.name
         
 
+        ContenidoTracks+= 
+        ContenidoTracks+= 
+        ContenidoTracks+= ""
         
     }
     
