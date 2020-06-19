@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/buscador.css">
-    <link rel="stylesheet" href="">
+    <script src="https://kit.fontawesome.com/acbb8010fa.js"
+    crossorigin="anonymous">
+    </script>
     <script src="js/buscador.js"></script>
-    <title>Search</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-  <!-- header -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-black">
+    
+
+
+<div class="container">
+
+    <!-- cabecera -->
+    <nav class="navbar navbar-expand-lg navbar- bg-dark bg-light>
         <a class="navbar-brand" href="index.html">Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -25,43 +38,64 @@
               <a class="nav-link" href="playlist.html"> Playlist </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="about.html" tabindex="-1" aria-disabled="true">About us</a>
+              <a class="nav-link disabled" href="about.html" tabindex="-1" aria-disabled="true"></a>
             </li>
           </ul>
           <img src="images/mslogo.png" width="60" height="50" alt="" loading="lazy">
           <form class="form-inline my-2 my-lg-0" action="buscador.html" method="GET">
-             <input class="form-control mr-sm-2" type="search" name="q" placeholder="SEARCH">
+             <input class="form-control mr-sm-2" type="search" placeholder="Search" name="id">
                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                    </form> 
         </div>
+      </nav>
+           
     
-   <!-- footer -->
-      </nav>
-      <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html">Home</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="list.html">Listado de Géneros <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="playlist.html">Playlist</a>
-            </li>
-            
-            <li class="nav-item dropup">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdown10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alumnos</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown10">
-                <a class="dropdown-item" href="https://www.instagram.com/ ">Jazmin Corro</a>
-                <a class="dropdown-item" href="https://www.instagram.com/ ">Calista Ortiz</a>
-                <a class="dropdown-item" href="https://www.instagram.com/ ">Tomas Rotholtz</a>
-              </li>
-            </ul>
-            <img src="images/deezer.jpg" width="60" height="50" alt="" loading="lazy">
-      </nav>
+  
+<!-- Chart Canciones -->
+  <h1 >  Resultados de la Busqueda</h1>
+   <div class="cajas d-flex" id="Canciones"> 
+    <div class="col-4"id="imagen"></div>
+   <div class="list-group col-7" id="Tracks">
    
-      </div>
+    <!-- icono agregar a la playlist -->
+    <svg class="bi bi-arrow-down-circle" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+      <path fill-rule="evenodd" d="M4.646 7.646a.5.5 0 0 1 .708 0L8 10.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z"/>
+      <path fill-rule="evenodd" d="M8 4.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5z"/>
+    </svg>
+    </div>     
+    </div> 
+ 
+<!-- Footer -->
+<nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
+  <a class="navbar-brand" href="index.html">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="list.html">Listado de Géneros <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="playlist.html">Playlist</a>
+      </li>
+      
+      <li class="nav-item dropup">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alumnos</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown10">
+          <a class="dropdown-item" href="https://www.instagram.com/ ">Jazmin Corro</a>
+          <a class="dropdown-item" href="https://www.instagram.com/ ">Calista Ortiz</a>
+          <a class="dropdown-item" href="https://www.instagram.com/ ">Tomas Rotholtz</a>
+        </div>
+      </li>
+    </ul>
+    <img src="images/deezer.jpg" width="60" height="50" alt="" loading="lazy">
+  </div>
+</nav>
+   
+</div>
 </body>
 </html>
+
+
