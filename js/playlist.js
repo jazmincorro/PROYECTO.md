@@ -17,6 +17,10 @@ window.onload = function () {
       ContenedorPlaylist.forEach(function (idTrack) {
         TrackVisible(idTrack);
       });
+      var boton= document.querySelector('.eliminar')
+      boton.addEventListener("click", function(){
+       window.localStorage.clear()
+      })
     }
     // Canciones API
     function TrackVisible(idTrack) {
@@ -39,9 +43,12 @@ window.onload = function () {
             "</a></td>" +
             "</tr>";
         })
+
+        
        
         .catch(function (error) {
           console.log(error);
         });
+
     }
   };
