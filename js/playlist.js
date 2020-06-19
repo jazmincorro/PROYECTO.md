@@ -1,15 +1,9 @@
 
 window.onload = function () {
-    
-   
     var recuperoStorage = localStorage.getItem("playlist");
-    
-    
-    
     var ContenedorPlaylist = JSON.parse(recuperoStorage);
-    
+
     //Playlist en el HTML
-  
     var ContenidoPlaylist = document.querySelector("#Playlist");
     console.log(recuperoStorage);
     // si no existe la cancion
