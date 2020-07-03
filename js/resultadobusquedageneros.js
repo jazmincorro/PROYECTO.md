@@ -1,5 +1,5 @@
 window.onload=function(){
-    var queryString = document.location.search.substring(0);
+    var queryString = document.location.search;
       var queryStringObj = new URLSearchParams(queryString);
       let idGeneros = queryStringObj.get("id");
        console.log(idGeneros)
